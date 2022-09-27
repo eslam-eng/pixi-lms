@@ -445,7 +445,7 @@
             $.toast({
                 heading: '',
                 text: learningToggleLangSuccess,
-                bgColor: '#43d477',
+                bgColor: '#578994',
                 textColor: 'white',
                 hideAfter: 10000,
                 position: 'bottom-right',

@@ -127,7 +127,7 @@ class FileController extends Controller
                 'creator_id' => $user->id,
                 'webinar_id' => $data['webinar_id'],
                 'chapter_id' => $data['chapter_id'],
-                'file' => $data['file_path'],
+                'file' => asset($data['file_path']),
                 'volume' => formatSizeUnits(!empty($fileInfos) ? $fileInfos['size'] : $data['volume']),
                 'file_type' => !empty($fileInfos) ? $fileInfos['extension'] : $data['file_type'],
                 'accessibility' => $data['accessibility'],

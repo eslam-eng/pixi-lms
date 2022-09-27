@@ -429,7 +429,7 @@ body {
 .resolved-answer-badge {
     padding: 5px 12px 5px 5px;
     border-radius: 22px;
-    border: solid 1px #43d477;
+    border: solid 1px #578994;
     background-color: rgba(67, 212, 119, 0.05);
     height: 43px;
 
@@ -439,7 +439,7 @@ body {
         min-width: 33px;
         height: 33px;
         margin-right: 5px;
-        color: #43d477;
+        color: #578994;
 
         &:before {
             content: '';
@@ -448,7 +448,7 @@ body {
             border-radius: 50%;
             opacity: .3;
             z-index: 1;
-            background-color: #43d477;
+            background-color: #578994;
         }
     }
 }

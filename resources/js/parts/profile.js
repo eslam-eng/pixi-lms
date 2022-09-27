@@ -220,7 +220,7 @@ $(function ($) {
             $.toast({
                 heading: result.title,
                 text: result.msg,
-                bgColor: result.status === 'success' ? '#43d477' : '#f63c3c',
+                bgColor: result.status === 'success' ? '#578994' : '#f63c3c',
                 textColor: 'white',
                 hideAfter: 10000,
                 position: 'bottom-right',

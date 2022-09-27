@@ -33,7 +33,7 @@
                     borderColor: '',
                     backgroundColor: [primaryColor, secondaryColor, warningColor],
                     pointBackgroundColor: '#fff',
-                    pointBorderColor: '#6777ef',
+                    pointBorderColor: '#3d707a',
                     pointRadius: 4,
                     fill: true,
                 }]

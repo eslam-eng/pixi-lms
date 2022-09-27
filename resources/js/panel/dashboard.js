@@ -12,7 +12,7 @@
                 label: '',
                 data: $chartData,
                 backgroundColor: 'transparent',
-                borderColor: '#43d477',
+                borderColor: '#578994',
                 borderWidth: 2
             }]
         },

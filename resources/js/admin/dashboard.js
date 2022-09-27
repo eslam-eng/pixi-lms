@@ -12,10 +12,10 @@ function makeStatisticsChart(name, section, badge, labels, datasets) {
                 label: badge,
                 data: datasets,
                 borderWidth: 5,
-                borderColor: '#6777ef',
+                borderColor: '#3d707a',
                 backgroundColor: 'transparent',
                 pointBackgroundColor: '#fff',
-                pointBorderColor: '#6777ef',
+                pointBorderColor: '#3d707a',
                 pointRadius: 4
             }]
         },

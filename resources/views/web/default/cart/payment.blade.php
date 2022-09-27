@@ -69,7 +69,7 @@
                         data-image="{{ $generalSettings['logo'] }}"
                         data-prefill.name="{{ $order->user->full_name }}"
                         data-prefill.email="{{ $order->user->email }}"
-                        data-theme.color="#43d477">
+                        data-theme.color="#578994">
                 </script>
             </form>
         @endif

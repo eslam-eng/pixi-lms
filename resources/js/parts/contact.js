@@ -33,6 +33,6 @@
         iconUrl: '/assets/default/img/location.png',
         iconAnchor: [lat - 14, lng + 10],
     });
-    L.marker([lat, lng], {color: '#43d477', icon: myIcon}).addTo(contactMap);
+    L.marker([lat, lng], {color: '#578994', icon: myIcon}).addTo(contactMap);
 
 })(jQuery);
