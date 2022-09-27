@@ -98,7 +98,6 @@ class SettingsController extends Controller
 
     public function store(Request $request, $name)
     {
-        dd($request->all());
 
         if (!empty($request->get('name'))) {
             $name = $request->get('name');
