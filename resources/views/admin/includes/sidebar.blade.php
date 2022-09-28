@@ -117,41 +117,41 @@
                 </li>
             @endcan()
 
-            @can('admin_certificate')
-                <li class="nav-item dropdown {{ (request()->is('admin/certificates*')) ? 'active' : '' }}">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
-                        <i class="fas fa-certificate"></i>
-                        <span>{{ trans('admin/main.certificates') }}</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        @can('admin_certificate_list')
-                            <li class="{{ (request()->is('admin/certificates')) ? 'active' : '' }}">
-                                <a class="nav-link" href="/admin/certificates">{{ trans('update.quizzes_related') }}</a>
-                            </li>
-                        @endcan
+{{--            @can('admin_certificate')--}}
+{{--                <li class="nav-item dropdown {{ (request()->is('admin/certificates*')) ? 'active' : '' }}">--}}
+{{--                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">--}}
+{{--                        <i class="fas fa-certificate"></i>--}}
+{{--                        <span>{{ trans('admin/main.certificates') }}</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="dropdown-menu">--}}
+{{--                        @can('admin_certificate_list')--}}
+{{--                            <li class="{{ (request()->is('admin/certificates')) ? 'active' : '' }}">--}}
+{{--                                <a class="nav-link" href="/admin/certificates">{{ trans('update.quizzes_related') }}</a>--}}
+{{--                            </li>--}}
+{{--                        @endcan--}}
 
-                        @can('admin_course_certificate_list')
-                            <li class="{{ (request()->is('admin/certificates/course-competition')) ? 'active' : '' }}">
-                                <a class="nav-link" href="/admin/certificates/course-competition">{{ trans('update.course_certificates') }}</a>
-                            </li>
-                        @endcan
+{{--                        @can('admin_course_certificate_list')--}}
+{{--                            <li class="{{ (request()->is('admin/certificates/course-competition')) ? 'active' : '' }}">--}}
+{{--                                <a class="nav-link" href="/admin/certificates/course-competition">{{ trans('update.course_certificates') }}</a>--}}
+{{--                            </li>--}}
+{{--                        @endcan--}}
 
-                        @can('admin_certificate_template_list')
-                            <li class="{{ (request()->is('admin/certificates/templates')) ? 'active' : '' }}">
-                                <a class="nav-link"
-                                   href="/admin/certificates/templates">{{ trans('admin/main.certificates_templates') }}</a>
-                            </li>
-                        @endcan
+{{--                        @can('admin_certificate_template_list')--}}
+{{--                            <li class="{{ (request()->is('admin/certificates/templates')) ? 'active' : '' }}">--}}
+{{--                                <a class="nav-link"--}}
+{{--                                   href="/admin/certificates/templates">{{ trans('admin/main.certificates_templates') }}</a>--}}
+{{--                            </li>--}}
+{{--                        @endcan--}}
 
-                        @can('admin_certificate_template_create')
-                            <li class="{{ (request()->is('admin/certificates/templates/new')) ? 'active' : '' }}">
-                                <a class="nav-link"
-                                   href="/admin/certificates/templates/new">{{ trans('admin/main.new_template') }}</a>
-                            </li>
-                        @endcan
-                    </ul>
-                </li>
-            @endcan
+{{--                        @can('admin_certificate_template_create')--}}
+{{--                            <li class="{{ (request()->is('admin/certificates/templates/new')) ? 'active' : '' }}">--}}
+{{--                                <a class="nav-link"--}}
+{{--                                   href="/admin/certificates/templates/new">{{ trans('admin/main.new_template') }}</a>--}}
+{{--                            </li>--}}
+{{--                        @endcan--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--            @endcan--}}
 
             @can('admin_webinar_assignments')
                 <li class="{{ (request()->is('admin/assignments')) ? 'active' : '' }}">
@@ -276,29 +276,27 @@
 
 
 
-            @if($authUser->can('admin_consultants_lists') or
-                $authUser->can('admin_appointments_lists')
-            )
-                <li class="menu-header">{{ trans('site.appointments') }}</li>
-            @endif
+{{--            @if($authUser->can('admin_consultants_lists') or $authUser->can('admin_appointments_lists'))--}}
+{{--                <li class="menu-header">{{ trans('site.appointments') }}</li>--}}
+{{--            @endif--}}
 
-            @can('admin_consultants_lists')
-                <li class="{{ (request()->is('admin/consultants')) ? 'active' : '' }}">
-                    <a href="/admin/consultants" class="nav-link">
-                        <i class="fas fa-id-card"></i>
-                        <span>{{ trans('admin/main.consultants') }}</span>
-                    </a>
-                </li>
-            @endcan
+{{--            @can('admin_consultants_lists')--}}
+{{--                <li class="{{ (request()->is('admin/consultants')) ? 'active' : '' }}">--}}
+{{--                    <a href="/admin/consultants" class="nav-link">--}}
+{{--                        <i class="fas fa-id-card"></i>--}}
+{{--                        <span>{{ trans('admin/main.consultants') }}</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            @endcan--}}
 
-            @can('admin_appointments_lists')
-                <li class="{{ (request()->is('admin/appointments')) ? 'active' : '' }}">
-                    <a class="nav-link" href="/admin/appointments">
-                        <i class="fas fa-address-book"></i>
-                        <span>{{ trans('admin/main.appointments') }}</span>
-                    </a>
-                </li>
-            @endcan
+{{--            @can('admin_appointments_lists')--}}
+{{--                <li class="{{ (request()->is('admin/appointments')) ? 'active' : '' }}">--}}
+{{--                    <a class="nav-link" href="/admin/appointments">--}}
+{{--                        <i class="fas fa-address-book"></i>--}}
+{{--                        <span>{{ trans('admin/main.appointments') }}</span>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
+{{--            @endcan--}}
 
             @if($authUser->can('admin_users') or
                 $authUser->can('admin_roles') or
@@ -691,11 +689,11 @@
             @if($authUser->can('admin_blog') or
                 $authUser->can('admin_pages') or
                 $authUser->can('admin_additional_pages') or
-                $authUser->can('admin_testimonials') or
                 $authUser->can('admin_tags') or
                 $authUser->can('admin_regions') or
                 $authUser->can('admin_store')
             )
+{{--                $authUser->can('admin_testimonials') or--}}
                 <li class="menu-header">{{ trans('admin/main.content') }}</li>
             @endif
 
@@ -877,27 +875,27 @@
                 </li>
             @endcan
 
-            @can('admin_testimonials')
-                <li class="nav-item dropdown {{ (request()->is('admin/testimonials*')) ? 'active' : '' }}">
-                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
-                        <i class="fas fa-address-card"></i>
-                        <span>{{ trans('admin/main.testimonials') }}</span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        @can('admin_testimonials_list')
-                            <li class="{{ (request()->is('admin/testimonials')) ? 'active' : '' }}">
-                                <a class="nav-link" href="/admin/testimonials">{{ trans('admin/main.lists') }}</a>
-                            </li>
-                        @endcan()
+{{--            @can('admin_testimonials')--}}
+{{--                <li class="nav-item dropdown {{ (request()->is('admin/testimonials*')) ? 'active' : '' }}">--}}
+{{--                    <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">--}}
+{{--                        <i class="fas fa-address-card"></i>--}}
+{{--                        <span>{{ trans('admin/main.testimonials') }}</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="dropdown-menu">--}}
+{{--                        @can('admin_testimonials_list')--}}
+{{--                            <li class="{{ (request()->is('admin/testimonials')) ? 'active' : '' }}">--}}
+{{--                                <a class="nav-link" href="/admin/testimonials">{{ trans('admin/main.lists') }}</a>--}}
+{{--                            </li>--}}
+{{--                        @endcan()--}}
 
-                        @can('admin_testimonials_create')
-                            <li class="{{ (request()->is('admin/testimonials/create')) ? 'active' : '' }}">
-                                <a class="nav-link" href="/admin/testimonials/create">{{ trans('admin/main.new') }}</a>
-                            </li>
-                        @endcan()
-                    </ul>
-                </li>
-            @endcan
+{{--                        @can('admin_testimonials_create')--}}
+{{--                            <li class="{{ (request()->is('admin/testimonials/create')) ? 'active' : '' }}">--}}
+{{--                                <a class="nav-link" href="/admin/testimonials/create">{{ trans('admin/main.new') }}</a>--}}
+{{--                            </li>--}}
+{{--                        @endcan()--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
+{{--            @endcan--}}
 
             @can('admin_tags')
                 <li class="{{ (request()->is('admin/tags')) ? 'active' : '' }}">
