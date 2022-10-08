@@ -220,17 +220,14 @@ License URI: https://romanpixel.com/license/
             border-radius: 30px;
             color: #fff;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 14px;
             font-weight: 600;
             height: 52px;
-            position: absolute;
             top: 0;
             right: 0;
-            padding: 0 20px;
+            padding: 10px 20px;
             text-transform: uppercase;
             z-index: 11;
-            width: 440px;
-            padding: 11px;
         }
 
         .btn-main:hover {
@@ -380,10 +377,10 @@ License URI: https://romanpixel.com/license/
         </a>
     </div>
 
-
-    <div class="newsletter">
-        <a role="button" href="https://verify.ntc-ac.org/" class="btn-verify">Verify Your Id</a>
-    </div><br>
+    <form action="https://verify.ntc-ac.org/" class="newsletter" name="newsletter" method="post">
+        <button type="submit" class="btn-verify">Verify Your Id</button>
+    </form>
+    <br>
 </div>
 <script>
     window.onload = function() {
