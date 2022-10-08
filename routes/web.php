@@ -1,9 +1,9 @@
 <?php
 
 
+use Illuminate\Support\Facades\Route;
 Route::get('/', 'web\HomeController@index');
 //
-//use Illuminate\Support\Facades\Route;
 //
 ///*
 //|--------------------------------------------------------------------------
