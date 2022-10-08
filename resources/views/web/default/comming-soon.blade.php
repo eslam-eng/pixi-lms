@@ -385,6 +385,14 @@ License URI: https://romanpixel.com/license/
         <a role="button" href="https://verify.ntc-ac.org/" class="btn-verify">Verify Your Id</a>
     </div><br>
 </div>
-<script>countdown('01/11/2023 03:14:07 AM');</script>
+<script>
+    window.onload = function() {
+        var preloader = document.getElementsByClassName('preloader')[0];
+        setTimeout(function(){
+            preloader.style.display = 'none';
+        }, 2000);
+    };
+
+</script>
 </body>
 </html>
