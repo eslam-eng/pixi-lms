@@ -2,7 +2,7 @@
 
 
 use Illuminate\Support\Facades\Route;
-Route::get('/', 'web\HomeController@index');
+Route::get('/', 'Web\HomeController@index');
 //
 //
 ///*
