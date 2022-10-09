@@ -346,23 +346,26 @@ License URI: https://romanpixel.com/license/
     <div id="loader"></div>
 </div>
 <div class="content-wrap">
-    <div class="cta-box">
-        <h1>We Will Be Back <span class="highlight">Soon!</span></h1>
-        <p>We are using this time to give our website a revamp!
-            Please leave us your email and we will let you know when we are back up.
-        </p>
+
+    <div class="logo-box">
+        <img src="{{asset('assets/default/logo.png')}}">
     </div>
-    <form action="" class="newsletter" name="newsletter" method="post">
-        <input type="email" class="form-field" name="email" placeholder="Your Email">
-        <button type="submit" class="btn-main">Notify me!</button>
-    </form>
-    <div class="social-icons">
-        <a href="mailto: info@ntc-ac.org">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                <title>Mailto</title>
-                <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-            </svg>
-        </a>
+    <div class="countdown">
+        <p class="timer-cta">We will relaunch our website in </p>
+        <ul class="timer">
+            <li>
+                <div class="time-box"><span class="time" id="days"></span> <span class="time-txt">Days</span></div>
+            </li>
+            <li>
+                <div class="time-box"><span class="time" id="hours"></span> <span class="time-txt">Hours</span></div>
+            </li>
+            <li>
+                <div class="time-box"><span class="time" id="minutes"></span> <span class="time-txt">Minutes</span></div>
+            </li>
+            <li>
+                <div class="time-box"><span class="time" id="seconds"></span> <span class="time-txt">Seconds</span></div>
+            </li>
+        </ul>
     </div>
 
     <form action="https://verify.ntc-ac.org/" class="newsletter" name="newsletter" method="post">
@@ -371,13 +374,56 @@ License URI: https://romanpixel.com/license/
     <br>
 </div>
 <script>
+    function countdown(dateEnd) {
+        var timer, days, hours, minutes, seconds;
+
+        dateEnd = new Date(dateEnd);
+        dateEnd = dateEnd.getTime();
+
+        if ( isNaN(dateEnd) ) {
+            return;
+        }
+
+        timer = setInterval(calculate, 1000);
+
+        function calculate() {
+            var dateStart = new Date();
+            var dateStart = new Date(dateStart.getUTCFullYear(),
+                dateStart.getUTCMonth(),
+                dateStart.getUTCDate(),
+                dateStart.getUTCHours(),
+                dateStart.getUTCMinutes(),
+                dateStart.getUTCSeconds());
+            var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000)
+
+            if ( timeRemaining >= 0 ) {
+                days    = parseInt(timeRemaining / 86400);
+                timeRemaining   = (timeRemaining % 86400);
+                hours   = parseInt(timeRemaining / 3600);
+                timeRemaining   = (timeRemaining % 3600);
+                minutes = parseInt(timeRemaining / 60);
+                timeRemaining   = (timeRemaining % 60);
+                seconds = parseInt(timeRemaining);
+
+                document.getElementById("days").innerHTML    = parseInt(days, 10);
+                document.getElementById("hours").innerHTML   = ("0" + hours).slice(-2);
+                document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
+                document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
+            } else {
+                return;
+            }
+        }
+
+        function display(days, hours, minutes, seconds) {}
+    }
+
     window.onload = function() {
         var preloader = document.getElementsByClassName('preloader')[0];
         setTimeout(function(){
             preloader.style.display = 'none';
         }, 2000);
     };
-
 </script>
+<script>countdown('01/11/2022 03:14:07 AM');</script>
 </body>
 </html>
