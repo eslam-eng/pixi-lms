@@ -394,8 +394,7 @@ License URI: https://romanpixel.com/license/
                 dateStart.getUTCHours(),
                 dateStart.getUTCMinutes(),
                 dateStart.getUTCSeconds());
-            var timeRemaining = parseInt((dateEnd - dateStart.getTime()) / 1000)
-
+            var timeRemaining = parseInt((dateEnd - dateStart.getTime())/2700)
             if ( timeRemaining >= 0 ) {
                 days    = parseInt(timeRemaining / 86400);
                 timeRemaining   = (timeRemaining % 86400);
@@ -423,6 +422,7 @@ License URI: https://romanpixel.com/license/
             preloader.style.display = 'none';
         }, 2000);
     };
+
 </script>
 <script>countdown('01/11/2022 03:14:07 AM');</script>
 </body>
